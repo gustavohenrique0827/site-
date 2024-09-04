@@ -1,0 +1,152 @@
+/* rastreio.css */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 20px;
+}
+
+.header img {
+    max-width: 20px;
+}
+
+.header h1 {
+    margin: 10px 0 0;
+}
+
+/* Navegação */
+.navbar-custom {
+    background-color: #0077b6;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #005f73;
+}
+
+/* Principal */
+.main {
+    padding: 20px;
+}
+
+.rastreamento {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.rastreamento h2 {
+    color: #0077b6;
+}
+
+.rastreamento p {
+    margin: 10px 0;
+}
+
+/* Formulário */
+.form-inline {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    max-width: 300px;
+}
+
+.btn-primary {
+    background-color: #0077b6;
+    border-color: #0077b6;
+}
+
+.btn-primary:hover {
+    background-color: #005f73;
+    border-color: #005f73;
+}
+
+/* Footer */
+.footer {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.footer img {
+    max-width: 100px;
+}
+
+/* Chatbot */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0077b6;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.chat-button img {
+    max-width: 40px;
+}
+
+.chat-container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #0077b6;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chat-box {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-container button {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #005f73;
+}

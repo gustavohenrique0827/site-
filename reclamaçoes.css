@@ -1,0 +1,120 @@
+/* ouvidoriainterna.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
+.dineng1 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d3d3d3;
+}
+
+/* Caixa de Menu e Subtítulo */
+.menu-box {
+    background-color: #e9ecef;
+}
+
+.subtitle {
+    background-color: #e9ecef;
+    padding: 1rem; /* Adiciona preenchimento para uma aparência mais agradável */
+}
+
+.subtitle-content {
+    margin-bottom: 1rem;
+}
+
+.subtitle-img {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+/* Caixa de FAQ */
+.faq-box {
+    display: inline-block;
+    margin: 1rem 0; /* Espaço acima e abaixo do botão */
+}
+
+/* Rodapé */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 1rem; /* Adiciona preenchimento para uma aparência mais agradável */
+}
+
+/* Botão de Chat */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.chat-container {
+    display: none; /* Inicia o chatbot escondido */
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-box {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.input-container {
+    display: flex;
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+}
+
+.input-container button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste a margem do botão de FAQ para a esquerda */
+.container.mt-3 {
+    display: flex;
+    justify-content: flex-start; /* Alinha o botão à esquerda */
+}

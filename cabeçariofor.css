@@ -1,0 +1,134 @@
+
+.dropdown-menu {
+    background-color: #005a8b; /* Cor de fundo do dropdown */
+}
+
+.dropdown-item {
+    color: #ffffff; /* Cor do texto dos links */
+}
+
+.dropdown-item:hover {
+    background-color: #003f5c; /* Cor de fundo ao passar o mouse sobre o link */
+}
+
+/* Estilo da caixa FAQ */
+.faq-box {
+    background-color: #005a8b;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    border: 7px solid transparent;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 80px;
+    transition: background-color 0.3s ease;
+    margin: 20px -37px;
+}
+
+.faq-box:hover {
+    background-color: #003f5c;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-evenly;
+}
+
+/* Estilos do chatbot */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chat-box {
+    padding: 10px;
+    height: 85%;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.input-container button {
+    border: none;
+    background-color: #005a8b;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #003f5c;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message.user {
+    align-self: flex-end;
+    background-color: #e1ffc7;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.chat-message.bot {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.dineng1 {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}

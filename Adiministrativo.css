@@ -1,0 +1,501 @@
+/* Definição da fonte personalizada */
+@font-face {
+    font-family: 'Horyzen Headline';
+    src: url('fontes/Horyzen Headline(5-1).otf');
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #005a8b;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Horyzen Headline', sans-serif; /* Usando a fonte personalizada */
+}
+
+.container {
+    margin: auto;
+    background: #d3e3f3;
+    padding: 11px 49px;
+    border-radius: 36px;
+    margin-top: 35px;
+    padding: 0;
+    display: block;
+    margin-left: 344px;
+}
+
+.container-login,
+.container-cadastro,
+.container-listagem {
+    width: 60%;
+    max-width: 70%; /* Limite de largura para contêineres específicos */
+    margin: auto;
+    display: block;
+
+}
+
+.container-listagem ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container-listagem ul li {
+    background: #41c4f8;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.container-listagem ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    line-height: 30px;
+}
+
+.container-listagem ul li a:hover {
+    text-decoration: underline;
+}
+
+.dados {
+    display: inline-block;
+    margin: 0;
+    width: 80%;
+}
+
+.titulo-item-listagem {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.descricao-item-listagem ul li {
+    font-size: 14px;
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.icone-lista {
+    display: inline-block;
+    margin: 0;
+    width: 10%;
+}
+
+.icone-lista img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.icone-lista a {
+    float: left;
+    margin: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 7px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    font-weight: bold;
+}
+
+#aviso-usuario,
+#aviso {
+    color: red;
+}
+
+.item-listagem {
+    margin: auto;
+    min-width: 350px;
+    width: 65%;
+    border-radius: 10px;
+    background: #5bffd156;
+    padding: 10px;
+}
+
+.botao {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background: rgb(42, 96, 222);
+    color: white;
+    border-radius: 25px;
+}
+
+.botao a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MENU SUPERIOR */
+
+.barra-superior {
+    margin: 0 auto 20px;
+    display: block;
+    width: 100%;
+}
+
+.barra-superior ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: rgb(28, 138, 255);
+    border-radius: 10px;
+}
+
+.barra-superior ul li {
+    margin: 10px 0;
+    color: white;
+    font-size: 18px;
+    display: inline;
+}
+
+.barra-superior ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 50px;
+    display: inline-block;
+    line-height: 2.1em;
+}
+
+.barra-superior ul li a:hover {
+    text-decoration: underline;
+    background: rgb(63, 162, 255);
+    border-radius: 10px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+}
+table {
+    margin: 0 auto;
+}
+/* Estilo personalizado para o dropdown */
+.dropdown-menu {
+    background-color: #005a8b;
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background-color: #003f5c;
+}
+
+/* Estilo da caixa FAQ */
+.faq-box {
+    background-color: #005a8b;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    border: 7px solid transparent;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 80px;
+    transition: background-color 0.3s ease;
+    margin: 20px -37px;
+}
+
+.faq-box:hover {
+    background-color: #003f5c;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-evenly;
+}
+
+/* Estilos do chatbot */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chat-box {
+    padding: 10px;
+    height: 85%;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.input-container button {
+    border: none;
+    background-color: #005a8b;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #003f5c;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message.user {
+    align-self: flex-end;
+    background-color: #e1ffc7;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.chat-message.bot {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* Estilo do footer */
+.footer {
+    padding: 10px;
+    background-color: #005a8b;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer img {
+    height: 20px;
+}
+
+.h1.dineng1 {
+    text-align: center;
+    flex: auto;
+}
+
+/* Estilo do cabeçalho */
+.header2 {
+    padding: 15px;
+    background-color: #005a8b;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    z-index: 10px;
+    flex-direction: row;
+    position: relative;
+}
+
+    .header .user-profile {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 29px;
+    }
+
+.header .user-profile img {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-right: 0;
+        margin-left: -49px;
+        margin-top: -86px;
+        font-family: Arial, sans-serif;
+    
+}
+
+.header .user-profile .user-info {
+    text-align: right;
+}
+
+.header .user-info .dropdown-menu p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.user-profile h2 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: right;
+    margin-left: 1500px;
+}
+
+.header .user-menu {
+    margin-left: 1352px;
+    text-align: right;
+    margin-top: -114px;
+    font-family: Arial, sans-serif;
+}
+
+.header .user-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.header .user-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do conteúdo principal */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo-container .logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.logo-container h1 {
+    font-size: 2rem;
+    color: #005a8b;
+}
+.card {
+    position: static;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 16px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 7px solid rgba(0, 0, 0, .125);
+    border-radius: 3.25rem;
+    align-items: center;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+
+.user-menu {
+    text-align: right;
+}
+
+.h2, h2 {
+    font-size: 1rem;
+    margin-left: 1350px;
+    margin-top: -185px;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    margin-left: 1350px;
+    margin-top: -6px;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    padding-left: 0;
+    margin-bottom: -33px;
+    list-style: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-left: -495px;
+    font-family: sans-serif;
+}
+.sidebar {
+    height: 94vh;
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+   background-color: #005a8b;
+;
+    padding-top: 9px;
+}
+
+
+.sidebar a {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #005a8b;
+    text-decoration: none;
+}
+
+.main-content {
+    margin-left: 240px; /* Espaço para a sidebar */
+    padding: 20px;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    margin-left: 19px;
+}

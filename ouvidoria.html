@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fala Dineng</title>
+    <link rel="stylesheet" href="ouvidoria.css">
+    <script src="ouvidoria.js" defer></script> <!-- Referência para o arquivo JavaScript externo -->
+</head>
+<body>
+    <div class="header">
+        <img src="imagens botoes/Dineng_Logo_02.png" alt="Dineng Logo" style="height: 100px;">
+        <h1 class="dineng1">OUVIDORIA </h1>
+    </div>
+    <nav class="nav">
+        <div class="menu">
+            <h2 id="menu-toggle">☰Menu</h2>
+            <ul id="menu-items">
+                <li><a href="Fala dineng.php">Início</a></li>
+                <li><a href="denuncia.php">Denúncia</a></li>
+                <li><a href="solicitaçoes.php">Solicitações</a></li>
+                <li><a href="sugestoes.php">Sugestão</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="menu-box">
+        <h4>O QUE VOCÊ QUER FAZER?</h4>
+        <p>Ajude a aprimorar os serviços públicos por meio de reclamações,<br>
+            elogios ou sugestões, ou ainda, registre uma denúncia.
+        </p>
+    </div>
+    <div class="back-arrow-container">
+        <a href="javascript:history.back()" class="back-arrow"><img src="imagens botoes/de-volta (1).png" alt="Voltar">
+        </a>
+    </div>
+    <div class="main">
+        <div class="subtitle" id="solicitacoes">
+            <a href="solicitaçoes.html">
+                <div class="subtitle-content">
+                    <img src="imagens botoes/solicitaçao-removebg-preview.png" alt="Solicitações Imagem" class="subtitle-img">
+                    <h3>Solicitações</h3>
+                </div>
+            </a>
+           
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero vitae nunc rutrum, a pretium purus consectetur. Nam auctor elit quis urna tempor feugiat.</p>
+        </div>
+        <div class="subtitle" id="reclamacoes">
+            <a href="reclamaçoes.php">
+                <div class="subtitle-content">
+                    <img src="imagens botoes/reclamaçoes-removebg-preview.png" alt="Reclamações Imagem" class="subtitle-img">
+                    <h3>Reclamações</h3>
+                </div>
+            </a>
+           
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis felis ut justo interdum tempus.</p>
+        </div>
+        <div class="subtitle" id="denuncias">
+            <a href="Denúncia.html">
+                <div class="subtitle-content">
+                    <img src="imagens botoes/denuncia-removebg-preview.png" alt="Denúncias Imagem" class="subtitle-img">
+                    <h3>Denúncias</h3>
+                </div>
+            </a>
+           
+            <p>Fusce euismod velit vel ligula eleifend, vel rutrum justo sagittis. Nullam eu massa ut lacus eleifend luctus sit amet sit amet odio.</p>
+        </div>
+        <div class="subtitle" id="sugestoes">
+            <a href="sugestoes.html">
+                <div class="subtitle-content">
+                    <img src="imagens botoes/sugestao-removebg-preview.png" alt="Sugestões Imagem" class="subtitle-img">
+                    <h3>Sugestões</h3>
+                </div>
+            </a>
+           
+            <p>Curabitur non risus in augue aliquet eleifend. Integer gravida, ligula vel volutpat ultrices, ex sapien feugiat tortor, nec vehicula ipsum tellus id ex.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="imagens botoes/Dineng_Logo_02.png" alt="Logo" style="height: 20px;">
+        &copy; 2024 Dineng Ouvidoria. Todos os direitos reservados.
+    </div>
+
+    <!-- Link para Perguntas Frequentes -->
+    <a href="Perguntas frequentes.php" class="faq-box">Perguntas Frequentes</a>
+
+    <!-- Botão de Chat -->
+    <div class="chat-button" id="chat-button" onclick="toggleChat()">
+        <img src="imagens botoes/chat-bot.png" alt="Chat Icon">
+    </div>
+
+    <!-- Container do Chatbot -->
+    <div class="chat-container" id="chat-container">
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta...">
+            <button type="button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+</body>
+</html>

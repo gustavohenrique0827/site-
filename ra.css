@@ -1,0 +1,107 @@
+
+/* Estilo quando resultados são encontrados */
+.tracking-content.result-found {
+    display: flex;
+    flex-direction: row; /* Alinha as seções horizontalmente */
+    align-items: flex-start; /* Alinha no topo */
+    justify-content: space-between; /* Distribui espaço entre as seções */
+    gap: 20px;
+}
+
+.tracking-content.result-found .search-container,
+.tracking-content.result-found .results-container,
+.tracking-content.result-found .timeline-container {
+    flex: 1;
+    padding: 3px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    margin-inline: auto;
+}
+
+/* Estilo para a linha do tempo */
+.timeline {
+    list-style-type: none;
+    padding: 42px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.timeline-content {
+    margin-left: 10px;
+}
+.timeline-container {
+margin: 89px;
+    margin-top: 21px;
+    margin-right: -81px;
+    margin-left: 830px;
+    /* display: flex; */
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    word-wrap: break-word;
+}
+
+       .results-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #e9ecef;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: inline-block;
+        margin-left: 316px;
+        font-weight: 700;
+        text-align: left;
+    }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tracking-content.result-found {
+        flex-direction: column; /* Empilha as seções verticalmente em telas menores */
+        align-items: center; /* Centraliza os containers */
+    }
+
+    .tracking-content.result-found .search-container,
+    .tracking-content.result-found .results-container,
+    .tracking-content.result-found .timeline-container {
+        max-width: 100%; /* Containers ocupam toda a largura disponível */
+    }
+}
+
+@media (max-width: 480px) {
+    .tracking-content.result-found {
+        gap: 10px; /* Reduz o espaçamento entre os containers */
+    }
+
+    .tracking-content.result-found .search-container,
+    .tracking-content.result-found .results-container,
+    .tracking-content.result-found .timeline-container {
+        padding: 10px; /* Reduz o padding para telas muito pequenas */
+    }
+}
+
+       .results-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #e9ecef;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: inline-block;
+        margin-left: 316px;
+        font-weight: 700;
+        text-align: left;
+    }

@@ -1,0 +1,56 @@
+.navbar {
+    justify-content: center;
+    padding: 5px 20px;
+    font-family: sans-serif;
+}
+        .header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .dineng1 {
+            font-size: 2.5rem;
+            font-family: 'Horyzen Headline', sans-serif;
+            margin-bottom: -0.5rem;
+            text-align: center;
+        }
+        
+        .container {
+            margin: auto;
+            background: #f8f9fa;
+            padding: 56px 49px;
+            border-radius: 24px;
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.375rem;
+            border: 1px solid #ced4da;
+        }
+
+        .btn-primary {
+            background-color: #005a8b;
+            border-color: #005a8b;
+            color: #fff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #003f5c;
+            border-color: #003f5c;
+        }
+
+        .alert {
+            color: red;
+            font-weight: bold;
+            margin-top: 1rem;
+        }

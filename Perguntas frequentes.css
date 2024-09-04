@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Horyzen Headline';
+    src: url('fontes/Horyzen Headline(5-1).otf') format("opentype");
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    font-family: 'Horyzen Headline', sans-serif;
+    background-color: #005a8b;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.nav {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+}
+
+.nav .menu h2 {
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-left: 20px; /* Mover a palavra "Menu" um pouco para a direita */
+}
+
+.nav .menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Esconder inicialmente */
+}
+
+.nav .menu ul.show {
+    display: block; /* Mostrar quando a classe 'show' for adicionada */
+}
+
+.nav .menu ul li {
+    margin-bottom: 10px;
+}
+
+.nav .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+#questions, #answers {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    flex: 1 1 45%;
+    margin: 20px; /* Centralizar horizontalmente e adicionar margem superior */
+}
+
+#questions h2, #answers h2 {
+    margin-top: 0; /* Remover a margem superior do h2 */
+}
+
+h3 {
+    text-align: left;
+    margin-bottom: 0.5px;
+    font-size: 1.1rem; /* Diminuir a altura */
+}
+
+#answers img.subtitle-img {
+    display: block;
+    margin: 0; /* Remover margin para alinhar à esquerda */
+    max-width: 100%; /* Ajustar a imagem ao container */
+}
+
+p, ul {
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0077b6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #005a8b;
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Diminuir a altura do padding */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; /* Centralizar o conteúdo horizontalmente */
+    align-items: center; /* Centralizar o conteúdo verticalmente */
+    height: 12px; /* Altura fixa menor */
+}

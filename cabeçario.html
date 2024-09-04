@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fala Dineng</title>
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+ <link rel="stylesheet" href="cabeçario.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header text-center py-3 d-flex align-items-center justify-content-between">
+        <a href="index.php">
+            <img src="imagens botoes/Dineng_Logo_02.png" alt="Dineng Logo" style="height: 70px;">
+        </a>
+        <h1 class="dineng1"></h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.php"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Dropdown Serviços -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ouvidoria Externa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <a class="dropdown-item" href="rastreamento.php">Solicitações</a>
+                            <a class="dropdown-item" href="Denuncias externa.php">Denúncias</a>
+                            <a class="dropdown-item" href="reclamacoess.php">Reclamações</a>
+                            <a class="dropdown-item" href="sugestoess.php">Sugestões</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown Ouvidoria Interna -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ouvidoria Interna
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="rastreamento.php">Solicitações</a>
+                            <a class="dropdown-item" href="Denuncia interna.php">Denúncias</a>
+                            <a class="dropdown-item" href="reclamacoes interna.php">Reclamações</a>
+                            <a class="dropdown-item" href="sugestoes internas.php">Sugestões</a>
+                        </div>
+                    </li>
+                    <!-- Outros links -->
+                    <li class="nav-item"><a class="nav-link" href="Quem Somos.php">Quem somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rastreamento.php">Solicitações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="RQ. 45 - Código de Ética.pdf">Código de Ética</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Rodapé -->
+    <footer class="footer text-center py-2 text-white">
+        <img src="imagens botoes/Dineng_Logo_02.png" alt="Logo" style="height: 20px;">
+        &copy; 2024 Dineng Ouvidoria. Todos os direitos reservados.
+    </footer>
+
+    <!-- Botão de Chat -->
+    <div class="chat-button" id="chat-button" onclick="toggleChat()">
+        <img src="imagens botoes/chat-bot.png" alt="Chat Icon" class="img-fluid">
+    </div>
+
+    <!-- Container do Chatbot -->
+    <div class="chat-container" id="chat-container">
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta...">
+            <button type="button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap e JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="chat.js" defer></script>
+    <script>
+        // Função para alternar a exibição do chatbot
+        function toggleChat() {
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.style.display = chatContainer.style.display === 'none' || chatContainer.style.display === '' ? 'block' : 'none';
+        }
+
+        // Função para enviar mensagens no chatbot
+        function sendMessage() {
+            const input = document.getElementById('user-input');
+            const chatBox = document.getElementById('chat-box');
+            if (input.value.trim()) {
+                const message = document.createElement('div');
+                message.textContent = input.value;
+                message.classList.add('chat-message', 'user');
+                chatBox.appendChild(message);
+                input.value = '';
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>

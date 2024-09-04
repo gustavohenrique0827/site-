@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Horyzen Headline';
+    src: url('fontes/Horyzen Headline(5-1).otf') format('opentype');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header {
+    position: relative;
+}
+.back-arrow-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+/* Cabeçalho */
+
+
+.back-arrow-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.back-arrow {
+    display: inline-block;
+    background-color: #0077b6;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+
+
+.dineng1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.navbar-custom {
+    background-color: #0077b6;
+    margin-top: -1px; /* Ajuste para evitar sobreposição com o header fixo */
+}
+
+.navbar-custom .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-custom .navbar-brand.active {
+    color: #ffffff;
+}
+
+/* Estilo para o container do formulário */
+.card {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 55px; /* Ajuste para compensar o espaço ocupado pelo header fixo */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Estilo do footer */

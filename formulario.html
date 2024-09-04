@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1 id="page-title" class="text-center mt-4"></h1>
+    <div class="container mt-4 mb-4">
+        <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+            <div class="card-body">
+                <h2 id="form-title" class="card-title text-center"></h2>
+                <form id="generic-form" action="processar_formulario.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Deseja enviar anonimamente?</label><br>
+                        <input type="radio" id="anonimo-sim" name="anonimo" value="sim" onclick="toggleAnonimo(true)">
+                        <label for="anonimo-sim">Sim</label>
+                        <input type="radio" id="anonimo-nao" name="anonimo" value="nao" onclick="toggleAnonimo(false)" checked>
+                        <label for="anonimo-nao">Não</label>
+                    </div>
+
+                    <div id="anonimo-campos">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Seu e-mail">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="conteudo-label" for="conteudo"></label>
+                        <textarea id="conteudo" name="conteudo" class="form-control" rows="4" placeholder="Digite sua mensagem aqui" required maxlength="2000"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="arquivo">Selecione um arquivo (máx. 2 MB, opcional):</label>
+                        <input type="file" id="arquivo" name="arquivo" class="form-control-file" accept="*/*">
+                    </div>
+                    
+                    <div class="text-center">
+                        <input type="submit" value="Enviar" class="btn btn-success btn-block">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnonimo(isAnonimo) {
+            document.getElementById('anonimo-campos').style.display = isAnonimo ? 'none' : 'block';
+        }
+
+        function customizeForm() {
+            const pageTitle = document.getElementById('page-title');
+            const formTitle = document.getElementById('form-title');
+            const mensagemLabel = document.getElementById('conteudo-label');
+
+            const url = window.location.href;
+
+            let tipoServico = '';
+            let tipoOuvidoria = '';
+
+            if (url.includes('Denuncias')) {
+                pageTitle.textContent = 'Denúncia Externa';
+                formTitle.textContent = 'Envie sua Denúncia';
+                mensagemLabel.textContent = 'Denúncia:';
+                tipoServico = 'Denúncia';
+                tipoOuvidoria = 'Externa';
+            } else if (url.includes('Denuncia')) {
+                pageTitle.textContent = 'Denúncia Interna';
+                formTitle.textContent = 'Envie sua Denúncia';
+                mensagemLabel.textContent = 'Denúncia:';
+                tipoServico = 'Denúncia';
+                tipoOuvidoria = 'Interna';
+            } else if (url.includes('sugestoes')) {
+                pageTitle.textContent = 'Sugestão Interna';
+                formTitle.textContent = 'Envie sua Sugestão';
+                mensagemLabel.textContent = 'Sugestão:';
+                tipoServico = 'Sugestão';
+                tipoOuvidoria = 'Interna';
+            } else if (url.includes('sugestoess')) {
+                pageTitle.textContent = 'Sugestão Externa';
+                formTitle.textContent = 'Envie sua Sugestão';
+                mensagemLabel.textContent = 'Sugestão:';
+                tipoServico = 'Sugestão';
+                tipoOuvidoria = 'Externa';
+            } else if (url.includes('reclamacoess')) {
+                pageTitle.textContent = 'Reclamação Externa';
+                formTitle.textContent = 'Envie sua Reclamação';
+                mensagemLabel.textContent = 'Reclamação:';
+                tipoServico = 'Reclamação';
+                tipoOuvidoria = 'Externa';
+            } else if (url.includes('reclamacoes')) {
+                pageTitle.textContent = 'Reclamação Interna';
+                formTitle.textContent = 'Envie sua Reclamação';
+                mensagemLabel.textContent = 'Reclamação:';
+                tipoServico = 'Reclamação';
+                tipoOuvidoria = 'Interna';
+            }
+
+            // Atualiza os campos ocultos com as informações determinadas
+            const form = document.getElementById('generic-form');
+            const tipoServicoInput = document.createElement('input');
+            tipoServicoInput.type = 'hidden';
+            tipoServicoInput.name = 'tipo-servico';
+            tipoServicoInput.value = tipoServico;
+            form.appendChild(tipoServicoInput);
+
+            const tipoOuvidoriaInput = document.createElement('input');
+            tipoOuvidoriaInput.type = 'hidden';
+            tipoOuvidoriaInput.name = 'tipo-ouvidoria';
+            tipoOuvidoriaInput.value = tipoOuvidoria;
+            form.appendChild(tipoOuvidoriaInput);
+        }
+
+        // Chama a função para personalizar o formulário ao carregar a página
+        window.onload = customizeForm;
+
+        document.getElementById('generic-form').addEventListener('submit', function(event) {
+            const fileInput = document.getElementById('arquivo');
+            const file = fileInput.files[0];
+            if (file && file.size > 2 * 1024 * 1024) { // 2 MB
+                alert('O arquivo deve ter no máximo 2 MB.');
+                fileInput.value = ''; // Limpa o campo de arquivo
+                event.preventDefault(); // Impede o envio do formulário
+            }
+        });
+    </script>
+</body>
+</html>

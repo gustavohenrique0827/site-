@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestões - Dineng Ouvidoria</title>
+    <link rel="stylesheet" href="sugestoes.css">
+    <script src="sugestoes.js" defer></script>
+</head>
+<body>
+    <a href="Fala dineng.html" class="back-button">
+        <img src="imagens/botoes/de-volta (1).png" alt="Voltar">
+    </a>
+    <div class="header">
+        <img src="Dineng_Logo_02.png" alt="Dineng Logo" style="height: 100px;">
+        <h1 class="dineng1">Sugestões</h1>
+    </div>
+    <div class="nav">
+        <a href="Fala dineng.html">Home</a>
+        <a href="sugestoes.html" class="active">Sugestões</a>
+        <a href="Denúncia.html">Denúncias</a>
+    </div>
+    <div class="main">
+        <div class="content">
+            <h2>Envie sua sugestão</h2>
+            <form id="sugestaoForm" action="processar sugestoes.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="anonima" name="anonima">
+                    <label for="anonima" class="label-checkbox">Enviar Anonimamente</label>
+                </div>
+                <div class="form-group">
+                    <label for="sugestao">Sugestão:</label><br>
+                    <textarea id="sugestao" name="sugestao" rows="4" cols="50" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="anexo">Anexo:</label>
+                    <input type="file" id="anexo" name="anexo">
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="imagens/logo.png" alt="Logo" style="height: 20px;">
+        &copy; 2024 Dineng Ouvidoria. Todos os direitos reservados.
+    </div>
+
+    <!-- Botão de Chat -->
+    <div class="chat-button" id="chat-button" onclick="toggleChat()">
+        <img src="imagens/botoes/chat-bot.png" alt="Chat Icon">
+    </div>
+
+    <!-- Container do Chatbot -->
+    <div class="chat-container" id="chat-container">
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta...">
+            <button type="button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+</body>
+</html>
+
